@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%gray(%date{MM-dd HH:mm:ss.SSS}) %highlight(%-5level) %yellow(%-15c{0}) %msg%n%throwable</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="io.grpc" level="INFO"/>
+    <logger name="io.temporal" level="WARN"/>
+    <logger name="io.temporal.internal.worker.Poller" level="WARN"/>
+    <root level="TRACE">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
