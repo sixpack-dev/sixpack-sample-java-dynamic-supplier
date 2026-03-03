@@ -1,39 +1,42 @@
+# Build output
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+build/
+out/
 
-### IntelliJ IDEA ###
+# Maven wrapper jar is required in repo
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE/editor
 .idea/
-*.iws
+.vscode/
 *.iml
 *.ipr
+*.iws
 
-### Eclipse ###
-.apt_generated
+# Java IDE metadata
 .classpath
-.factorypath
 .project
-.settings
+.settings/
+.factorypath
+.apt_generated
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
-/dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# Logs and OS files
+*.log
 .DS_Store
+Thumbs.db
 
-### Local secrets/config ###
+# Local configuration/secrets
 config/*
 !config/.gitkeep
+
+# Generated certificates
+certs/*.pem
+!certs/.gitkeep
