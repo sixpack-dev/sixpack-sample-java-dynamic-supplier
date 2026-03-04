@@ -14,7 +14,10 @@ import java.util.concurrent.TimeUnit;
 @SupplierMetadata(
         name = MySupplier.NAME,
         description = "Sample dynamic supplier showing runtime manifest construction and refresh.",
-        reportIssueUrl = "https://www.sixpack.dev/supplier")
+        maintainer = "Sixpack Samples Team",
+        reportIssueUrl = "https://www.sixpack.dev/supplier",
+        reportIssueEmail = "support@sixpack.dev",
+        alertEmails = {"support@sixpack.dev"})
 public class MySupplier extends DynamicSupplier {
 
     public static final String NAME = "Front Office Systems";
@@ -29,7 +32,10 @@ public class MySupplier extends DynamicSupplier {
 
     public static void main(String... args) {
         var supplier = new MySupplier();
-        supplier.bootstrap();
+        supplier
+                .withClientCertificatePath("config/generator.pem")
+                .withClientKeyPath("config/generator.key")
+                .bootstrap();
         supplier.scheduleEnhancedManifestRefresh();
     }
 

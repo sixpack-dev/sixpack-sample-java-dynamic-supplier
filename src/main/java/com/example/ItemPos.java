@@ -85,6 +85,8 @@ final class ItemPos {
                 .description("Adds a row to a points_of_sales table using a simple address.")
                 .maintainer("Sixpack Samples Team")
                 .reportIssueUrl("https://www.sixpack.dev/supplier")
+                .reportIssueEmail("support@sixpack.dev")
+                .alertEmails(new String[]{"support@sixpack.dev"})
                 .visibility(Visibility.VISIBLE)
                 .itemType(ItemType.GENERATOR)
                 .templates(List.of())

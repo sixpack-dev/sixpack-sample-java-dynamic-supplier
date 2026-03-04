@@ -36,7 +36,3 @@ Thumbs.db
 # Local configuration/secrets
 config/*
 !config/.gitkeep
-
-# Generated certificates
-certs/*.pem
-!certs/.gitkeep
